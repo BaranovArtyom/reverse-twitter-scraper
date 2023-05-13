@@ -55,7 +55,7 @@ class TwitterScraper:
             self.proxies = []
             for proxy in proxyList:
                 __split = str(proxy).replace("\n", "").split(":")
-                fProxy = {'https': f'http://{__split[2]}:{__split[3]}@{__split[0]}:{__split[1]}'}
+                fProxy = {'all://': f'http://{__split[2]}:{__split[3]}@{__split[0]}:{__split[1]}'}
                 self.proxies.append(fProxy)
         else:
             self.proxies = None
